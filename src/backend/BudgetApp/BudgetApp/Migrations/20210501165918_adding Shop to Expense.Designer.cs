@@ -4,14 +4,16 @@ using BudgetApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BudgetApp.Migrations
 {
     [DbContext(typeof(BudgetAppContext))]
-    partial class BudgetAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210501165918_adding Shop to Expense")]
+    partial class addingShoptoExpense
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

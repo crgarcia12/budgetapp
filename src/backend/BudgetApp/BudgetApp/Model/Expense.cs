@@ -8,6 +8,7 @@ namespace BudgetApp.Model
     public class Expense
     {
         public Guid Id { get; set; }
+        public string Shop { get; set; }
         public int Amount { get; set; }
         public string Detail { get; set; }
     }
