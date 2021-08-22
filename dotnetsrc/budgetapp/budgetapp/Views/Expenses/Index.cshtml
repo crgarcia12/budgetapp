@@ -7,25 +7,28 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Shop)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Shared)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Home)
+                @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Amount)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.PaymentMethod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shared)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ForHouse)
             </th>
             <th></th>
         </tr>
@@ -34,25 +37,29 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.User)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Shop)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Shared)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Home)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Amount)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shared)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ForHouse)
+            </td>
+
+            <td>
                 @Html.DisplayFor(modelItem => item.PaymentMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

@@ -18,12 +18,14 @@ namespace BudgetApp.Models
     public class Expense
     {
         public Guid Id { get; set; }
+        public DateTime Date { get; set; } = DateTime.UtcNow;
         public string User { get; set; }
-        public string Description { get; set; }
         public string Shop { get; set; }
-        public bool Shared { get; set; }
-        public bool Home { get; set; }
         public double Amount { get; set; }
+        public string Description { get; set; }
+        public bool Shared { get; set; }
+        public bool ForHouse { get; set; }
+
         public PaymentMethods PaymentMethod { get; set; }
     }
 }
