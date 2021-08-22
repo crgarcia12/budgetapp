@@ -9,13 +9,12 @@ on:
       - main
   workflow_dispatch:
   
-defaults:
-  run:
-    working-directory: dotnetsrc/budgetapp/budgetapp/
-
 jobs:
   build:
     runs-on: 'ubuntu-latest'
+    defaults:
+      run:
+        working-directory: dotnetsrc/budgetapp/budgetapp/
 
     steps:
     - uses: actions/checkout@v2
