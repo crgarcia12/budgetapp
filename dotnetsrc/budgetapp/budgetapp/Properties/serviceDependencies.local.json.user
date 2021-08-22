@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-08-22T12:28:06.0715092Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-08-22T12:28:55.9997778Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "930c11b0-5e6d-458f-b9e3-f3dda0734110"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "crgar-budgetapp-rg"
+    }
+  }
+}
