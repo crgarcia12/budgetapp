@@ -11,7 +11,7 @@ on:
   
 defaults:
   run:
-    working-directory: dotnetsrc/budgetapp/BudgetApp
+    working-directory: dotnetsrc/budgetapp/budgetapp/
 
 jobs:
   build:
