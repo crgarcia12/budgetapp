@@ -35,15 +35,9 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_d4ea64c638804b19b193be9ac55f23dd }}
     
     - name: manual build
-      run: docker build -f Dockerfile -t ba ..
-      
-    - name: Build and push container image to registry
-      uses: docker/build-push-action@v2
-      with:
-        context: ..
-        push: true
-        tags: crgarciabudgetappacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_aee0e68d58654ff78aada149d852a36f }}/budgetapp:${{ github.sha }}
-        file: Dockerfile
+      run: 
+        docker build -f Dockerfile -t crgarciabudgetappacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_aee0e68d58654ff78aada149d852a36f }}/budgetapp:${{ github.sha }} ..
+        docker push crgarciabudgetappacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_aee0e68d58654ff78aada149d852a36f }}/budgetapp:${{ github.sha }}
 
   deploy:
     runs-on: ubuntu-latest
