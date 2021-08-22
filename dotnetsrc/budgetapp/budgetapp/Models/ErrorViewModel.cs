@@ -1,6 +1,6 @@
 using System;
 
-namespace budgetapp.Models
+namespace BudgetApp.Models
 {
     public class ErrorViewModel
     {

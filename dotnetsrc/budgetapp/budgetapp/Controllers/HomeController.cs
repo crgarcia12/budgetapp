@@ -1,4 +1,4 @@
-﻿using budgetapp.Models;
+﻿using BudgetApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace budgetapp.Controllers
+namespace BudgetApp.Controllers
 {
     public class HomeController : Controller
     {

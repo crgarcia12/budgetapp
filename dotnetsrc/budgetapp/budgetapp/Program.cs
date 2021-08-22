@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace budgetapp
+namespace BudgetApp
 {
     public class Program
     {
