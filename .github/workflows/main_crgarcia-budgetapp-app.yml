@@ -35,7 +35,7 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_d4ea64c638804b19b193be9ac55f23dd }}
     
     - name: manual build
-      run: 
+      run: |
         docker build -f Dockerfile -t crgarciabudgetappacr.azurecr.io/budgetapp:${{ github.sha }} ..
         docker push crgarciabudgetappacr.azurecr.io/budgetapp:${{ github.sha }}
 
