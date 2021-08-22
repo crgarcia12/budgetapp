@@ -11,7 +11,7 @@ on:
   
 defaults:
   run:
-    working-directory: dotnetsrc\budgetapp
+    working-directory: dotnetsrc/budgetapp/BudgetApp
 
 jobs:
   build:
@@ -36,7 +36,7 @@ jobs:
         context: ..
         push: true
         tags: crgarciabudgetappacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_aee0e68d58654ff78aada149d852a36f }}/budgetapp:${{ github.sha }}
-        file: ./Dockerfile
+        file: Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
