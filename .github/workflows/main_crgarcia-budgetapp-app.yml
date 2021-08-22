@@ -35,7 +35,7 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_d4ea64c638804b19b193be9ac55f23dd }}
     
     - name: manual build
-      run: docker build -f .\Dockerfile -t ba ..
+      run: docker build -f Dockerfile -t ba ..
       
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
