@@ -3,11 +3,15 @@
 # Frontend:
 Created with `npm init uifabric`
 
-Add a component
-
-`npx generate-react-cli component ExpensesList`
+## Add a component
+```
+npx generate-react-cli component ExpensesList`
+```
 ## Start:
+```
+npm install
 npm start
+```
 
 # Backend
 
