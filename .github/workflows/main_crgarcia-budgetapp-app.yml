@@ -36,8 +36,8 @@ jobs:
     
     - name: manual build
       run: 
-        docker build -f Dockerfile -t crgarciabudgetappacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_aee0e68d58654ff78aada149d852a36f }}/budgetapp:${{ github.sha }} ..
-        docker push crgarciabudgetappacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_aee0e68d58654ff78aada149d852a36f }}/budgetapp:${{ github.sha }}
+        docker build -f Dockerfile -t crgarciabudgetappacr.azurecr.io/budgetapp:${{ github.sha }} ..
+        docker push crgarciabudgetappacr.azurecr.io/budgetapp:${{ github.sha }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -54,4 +54,4 @@ jobs:
         app-name: 'crgarcia-budgetapp-app'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_e4c9512e909c4d6ebe30febaf5eb4de4 }}
-        images: 'crgarciabudgetappacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_aee0e68d58654ff78aada149d852a36f }}/budgetapp:${{ github.sha }}'
+        images: 'crgarciabudgetappacr.azurecr.io/budgetapp:${{ github.sha }}'
